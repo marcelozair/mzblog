@@ -1,0 +1,53 @@
+.auth-container {
+  @apply bg-background-100 w-screen h-screen flex items-center justify-center;
+}
+
+.auth-container_card {
+  @apply bg-white rounded flex;
+  width: 950px;
+  height: 600px;
+  box-shadow: 0px 2px 3px rgba(221, 144, 56, 0.1);
+}
+
+.auth-container_card-image {
+  @apply h-full overflow-hidden m-0;
+  width: 340px;
+}
+
+.auth-container_card-content {
+  @apply flex justify-center flex-col;
+  padding: 30px 90px;
+  width: calc(100% - 340px);
+}
+
+.auth-container_card-title {
+  @apply font-semibold text-fontcolor;
+  font-size: 25px;
+} 
+
+.auth-container_card-description {
+  @apply text-fontcolor-100;
+  font-size: 15px;
+} 
+
+.small-title-line{
+  @apply text-center overflow-hidden my-4;
+
+}
+.small-title-line > span{
+  @apply text-fontcolor-50 relative inline-block;
+}
+.small-title-line > span:before, .small-title-line > span:after{
+ content: '';
+ position: absolute;
+ top: 50%;
+ border-bottom: 2px solid;
+ width: 100vw;
+ margin: 0 20px;
+}
+.small-title-line > span:before{
+ right: 100%;
+}
+.small-title-line > span:after{
+ left: 100%;
+}

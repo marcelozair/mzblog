@@ -1,0 +1,15 @@
+.input_field {
+  @apply w-full flex flex-col mb-4;
+  transition: all 0.3s ease;
+}
+
+.input_field-label {
+  @apply text-fontcolor-100 font-semibold;
+  font-size: 15px;
+}
+
+.input_field-input {
+  @apply mt-2 placeholder-fontcolor-50 text-fontcolor-100 border-2 border-fontcolor-50 px-4 py-2 outline-none rounded focus:shadow-md shadow-primary-100;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}

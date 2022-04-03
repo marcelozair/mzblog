@@ -1,0 +1,4 @@
+.button_field {
+  @apply px-6 py-2 text-white bg-primary text-center w-full rounded font-semibold hover:bg-primary-100;
+  transition: all 0.3s ease;
+}
