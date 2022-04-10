@@ -20,6 +20,9 @@ module.exports = {
         DEFAULT: '#E16E49',
         100: '#E78C6F',
       },
+      secundary: {
+        DEFAULT: '#E14949',
+      },
       background: {
         100: '#F4E6D8'
       },

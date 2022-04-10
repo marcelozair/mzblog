@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from 'next/link';
+import Link from "next/link";
 import Image from "next/image";
 import type { NextPage } from "next";
 import InputField from "components/common/InputField";
@@ -51,7 +51,7 @@ const SignIn: NextPage = () => {
               <p className="text-center mt-16 text-fontcolor-100">
                 Don&apos;t have an account yet?{" "}
                 <Link href="/signup">
-                 <a  className="text-primary">Register now</a>
+                  <a className="text-primary">Register now</a>
                 </Link>
               </p>
             </div>
