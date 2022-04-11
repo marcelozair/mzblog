@@ -1,18 +1,21 @@
 import React from "react";
+import { tInputChange } from "types/form/event.type";
 
 type tInputField = {
+  onChange?: (event: tInputChange) => any;
   placeholder: string;
+  required?: boolean;
   label: string;
   type?: string;
-  id?: string;
-  required?: boolean;
   name?: string;
+  id?: string;
 };
 
 const InputField: React.FC<tInputField> = ({
   required = false,
   type = "text",
   placeholder,
+  onChange,
   label,
   name,
   id,
@@ -23,6 +26,7 @@ const InputField: React.FC<tInputField> = ({
       <input
         className="input_field-input"
         placeholder={placeholder}
+        onChange={onChange}
         required={required}
         name={name}
         type={type}

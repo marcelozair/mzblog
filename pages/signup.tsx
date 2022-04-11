@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import type { NextPage } from "next";
-import InputField from "components/common/InputField";
+import InputField from "components/form/InputField";
 import ButtonField from "components/common/ButtonField";
-import SignupMainImage from "./../public/assets/image/svg/signup.svg";
+import InputPassword from "components/form/InputPassword";
 
 const SignUp: NextPage = () => {
   return (
@@ -37,12 +36,7 @@ const SignUp: NextPage = () => {
                 label="Your e-mail"
                 placeholder="your-email@mzblog.com"
               />
-              <InputField
-                type="password"
-                required={true}
-                label="Password"
-                placeholder="a leats 8 characters"
-              />
+              <InputPassword />
               <div className="form-check">
                 <input className="form-check-input" type="checkbox" />
                 <label className="text-fontcolor">

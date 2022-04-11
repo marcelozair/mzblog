@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import type { NextPage } from "next";
-import InputField from "components/common/InputField";
+import InputField from "components/form/InputField";
 import ButtonField from "components/common/ButtonField";
 import GoogleIcon from "./../public/assets/image/svg/google-icon.svg";
 import SigninMainImage from "./../public/assets/image/svg/signin.svg";

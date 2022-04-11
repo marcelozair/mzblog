@@ -1,0 +1,1 @@
+export type tInputChange = React.ChangeEvent<HTMLInputElement>;
