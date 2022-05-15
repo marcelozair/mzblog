@@ -15,7 +15,11 @@ const SignUp: NextPage = () => {
       <section className="auth-container">
         <div className="auth-container_card-signup">
           <div className="auth-container_card-image-signup">
-            <img src="/assets/image/svg/signup.svg" className="h-full object-cover" alt="signup-image" />
+            <img
+              src="/assets/image/svg/signup.svg"
+              className="h-full object-cover"
+              alt="signup-image"
+            />
           </div>
           <form className="auth-container_card-content">
             <h2 className="auth-container_card-title">Sing Up.</h2>

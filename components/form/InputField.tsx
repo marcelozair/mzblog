@@ -1,5 +1,5 @@
 import React from "react";
-import { tInputChange } from "types/form/event.type";
+import { tInputChange } from "types/form/event";
 
 type tInputField = {
   onChange?: (event: tInputChange) => any;

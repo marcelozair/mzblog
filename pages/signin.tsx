@@ -1,13 +1,24 @@
+import $api from "api";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import type { NextPage } from "next";
+import { tFormSubmit } from "types/form/event";
 import InputField from "components/form/InputField";
-import ButtonField from "components/common/ButtonField";
+import ButtonField from "components/form/ButtonField";
 import GoogleIcon from "./../public/assets/image/svg/google-icon.svg";
 import SigninMainImage from "./../public/assets/image/svg/signin.svg";
 
 const SignIn: NextPage = () => {
+  const subimtSignin = async (event: any): Promise<void> => {
+    event.preventDefault();
+    const { email, password } = event.target;
+    const signinSession = await $api.auth.signin({
+      email: email.value,
+      password: password.value,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -19,7 +30,7 @@ const SignIn: NextPage = () => {
           <div className="auth-container_card-image">
             <Image src={SigninMainImage} alt="signin-image" />
           </div>
-          <form className="auth-container_card-content">
+          <form className="auth-container_card-content" onSubmit={subimtSignin}>
             <h2 className="auth-container_card-title">Sing In.</h2>
             <p className="auth-container_card-description">
               Hello there, if you is here because can to create big things, you
@@ -30,12 +41,14 @@ const SignIn: NextPage = () => {
                 type="email"
                 required={true}
                 label="Your e-mail"
+                name="email"
                 placeholder="your-email@mzblog.com"
               />
               <InputField
                 type="password"
                 required={true}
                 label="Password"
+                name="password"
                 placeholder="a leats 8 characters"
               />
               <div className="mt-10">
